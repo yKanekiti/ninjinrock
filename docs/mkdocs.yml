@@ -1,0 +1,29 @@
+### Site metadata ###
+
+site_name: ninjinrock
+site_description: ninjinrock on GH Pages - including CI
+site_url: https://yKanekiti.github.io/ninjinrock/
+
+repo_url: https://github.com/yKanekiti/ninjinrock/
+edit_uri: edit/main/docs/docs
+
+### Build settings ###
+
+theme:
+  name: material
+  language: ja
+  palette:
+    primary: red
+  features:
+    - navigation.tabs
+
+markdown_extensions:
+  - markdown_katex:
+      no_inline_svg: True
+      insert_fonts_css: True
+
+nav:
+  - Home: index.md
+  - pages:
+      - ページ1a: dir1/page1-1a.md
+      - ページ1b: dir1/page1-1b.md
