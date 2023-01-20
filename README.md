@@ -1,3 +1,4 @@
-### ninjinrock
-    https://ykanekiti.github.io/ninjinrock/
+## ninjinrock
+
+[にんじんろっく](https://ykanekiti.github.io/ninjinrock/)
 

@@ -23,7 +23,7 @@ markdown_extensions:
       insert_fonts_css: True
 
 nav:
-  - Home: index.md
-  - pages:
-      - ページ1a: dir1/page1-1a.md
+  - HOME: index.md
+  - CONTENTS:
+      - メイン: dir1/page1-1a.md
       - 確率分布: dir1/page1-1b.md
