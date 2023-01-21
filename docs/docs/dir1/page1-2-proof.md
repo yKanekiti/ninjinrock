@@ -72,8 +72,8 @@ Var[X] &= G^{\prime\prime}(1) + G^\prime(1) - G^\prime(1)^2 = \lambda
 $`X \sim NB(r, p)`$とすると, 次が成立する.
 ```math
 \begin{align*}
-E[X] &= 
-Var[X] &= 
+E[X] &= \frac{1-p}{p}r \\
+Var[X] &= \frac{1-p}{p^2}r
 \end{align*}
 ```
 *&lt;proof&gt;*  
