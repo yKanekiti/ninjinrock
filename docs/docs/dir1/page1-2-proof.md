@@ -22,7 +22,7 @@ E[X_i] &= p \\
 Var[X_i] &= E[X_i^2] - E[X_i]^2 = p - p^2 = p(1-p)
 \end{align*}
 ```
-となる. 期待値の線形性と, および各 $`X_i`$ は独立であることから
+となる. 期待値の線形性と各 $`X_i`$ が独立であることから
 ```math
 \begin{align*}
 E[X] &= E[X_1] + \ldots + E[X_n] = np\\
@@ -119,8 +119,55 @@ Var[X] &= G^{\prime\prime}(1) + G^\prime(1) - G^\prime(1)^2
 
 ## 正規分布
 正規分布と言えば大抵は期待値と分散がそもそも与えられてるものだが, ここでは確率密度関数から直接求めてみる
+***Proposition***  
+確率変数 $`X`$ が次の密度関数を持つ分布に従うとする: 
+```math
+f(x) = \frac{1}{\sqrt{2\pi\sigma^2}}\exp\{-\frac{(x-\mu)^2}{2\sigma^2}\}
+```
+このとき, 次が成立する.
+```math
+\begin{align*}
+E[X] &= \mu \\
+Var[X] &= \sigma^2
+\end{align*}
+```
+*&lt;proof&gt;*  
+まず, $`z`$ の関数
+```math
+\phi (z) = \frac{1}{\sqrt{2\pi}}\exp( -\frac{z^2}{2})
+```
+について, 次の2つの等式が成り立つことを示す： 
+```math
+\begin{align}
+\int^\infty_{-\infty} z\phi(z) dz = 0 \\
+\int^\infty_{-\infty} z^2\phi(z) dz = 1
+\end{align}
+```
+(1)については被積分関数が奇関数なので明らか.  
+(2)は $`\phi^\prime(z) = -z\phi(z)`$ に注意すると, 
+```math
+\begin{align*}
+\int^\infty_{-\infty} z^2\phi(z) dz &= -\int^\infty_{-\infty}z\phi^\prime(z)dz \\
+&= -\big[z\phi(z)\big]^\infty_{-\infty} + \int^\infty_{-\infty}\phi(z) dz \\
+&= 1 
+\end{align*}
+```
+となるのでOK.  
 
-
+以上より, $`f(x)`$ の期待値 $`E[X]`$ および分散 $`Var[X]`$ は
+```math
+\begin{align*}
+z &= \frac{x-\mu}{\sigma} \\
+f(x) &= \frac{1}{\sigma}\phi(z)
+\end{align*}
+```
+とおけば次のように求められる：
+```math
+\begin{align*}
+E[X] &= \int^\infty_{-\infty}xf(x)dx = \int^\infty_{-\infty}(\sigma z + \mu)\phi(z)dz = \mu \\
+Var[X] &= \int^\infty_{-\infty}(x-\mu)^2f(x)dx = \sigma^2 \int^\infty_{-\infty} z^2\phi(z)dz = \sigma^2
+\end{align*}
+```
 ## ガンマ分布
 
 ## 指数分布
