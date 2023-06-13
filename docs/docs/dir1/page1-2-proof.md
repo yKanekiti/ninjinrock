@@ -154,7 +154,7 @@ Var[X] &= \sigma^2
 ```
 となるのでOK.  
 
-以上より, $`f(x)`$ の期待値 $`E[X]`$ および分散 $`Var[X]`$ は
+以上より, $`X`$ の期待値 $`E[X]`$ および分散 $`Var[X]`$ は
 ```math
 \begin{align*}
 z &= \frac{x-\mu}{\sigma} \\
