@@ -84,21 +84,22 @@ Var[X] &= \frac{1-p}{p^2}r
            &= \displaystyle\sum^\infty_{k=0} \binom{r+k-1}{k} q^k
 \end{align*}
 ```
-が得られるので, これを用いるとポアソン分布の確率母関数 $`G(s)`$ は
+が得られるので, これを用いると負の二項分布の確率母関数 $`G(s)`$ は
 
 ```math
 \begin{align*}
 G(s) &= \displaystyle\sum^\infty_{x=0} s^x \binom{r+x-1}{x}(1-p)^xp^r \\
      &= \displaystyle\sum^\infty_{x=0} \binom{r+x-1}{x} (qs)^xp^r \\
-     &= (1-q)^{-r} p^r \\
-     &= (1-\frac{s-1}{p}q)^{-r}
+     &= (1-qs)^{-r} p^r \\
+     &= (ps-s+1)^{-r} p^r \\
+     &= (s - \frac{s-1}{p})^{-r}\\
 \end{align*}
 ```
 となる. $` G(s)`$ を2階まで微分は
 ```math
 \begin{align*}
-G^\prime(s) &= \frac{q}{p}r (1-\frac{s-1}{p}q)^{-r-1}\\
-G^{\prime\prime}(s) &= \frac{q^2}{p^2}r(r+1) (1-\frac{s-1}{p}q)^{-r-2}\\
+G^\prime(s) &= \frac{q}{p}r (1-\frac{s-1}{p})^{-r-1}\\
+G^{\prime\prime}(s) &= \frac{q^2}{p^2}r(r+1) (1-\frac{s-1}{p})^{-r-2}\\
 \end{align*}
 ```
 であるから, 期待値と分散は
