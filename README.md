@@ -2,4 +2,4 @@
 
 [にんじんろっく](https://ykanekiti.github.io/ninjinrock/)
 
-pushしとけばworkflowsのやつが走って反映してくれる(https://github.com/yKanekiti/ninjinrock/actions/）
+[mainブランチにpushしとけばworkflowsのやつが走って反映してくれるっぽいけどよう知らん](https://github.com/yKanekiti/ninjinrock/actions/)
